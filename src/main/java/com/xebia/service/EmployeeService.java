@@ -6,4 +6,6 @@ import java.util.Collection;
 
 public interface EmployeeService {
      Collection<Employee> findAll();
+
+     void save(Employee employee);
 }

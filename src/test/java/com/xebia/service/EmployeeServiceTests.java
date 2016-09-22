@@ -20,7 +20,16 @@ public class EmployeeServiceTests {
 
     @Test
     public void findAllReturnsEmployees() {
-        Collection<Employee> list = service.findAll();
-        Assert.assertEquals(list.size(), 2);
+        Assert.assertEquals(3,getAllEmployees().size());
+    }
+
+    private Collection<Employee> getAllEmployees() {
+        return service.findAll();
+    }
+
+    @Test
+    public void createAnEmployee(){
+        service.save(new Employee("Jayati"));
+        Assert.assertEquals(3,getAllEmployees().size());
     }
 }

@@ -17,4 +17,9 @@ public class EmployeeServiceBean implements EmployeeService {
     public Collection<Employee> findAll() {
         return employeeRepository.findAll();
     }
+
+    @Override
+    public void save(Employee employee) {
+        employeeRepository.save(employee);
+    }
 }
